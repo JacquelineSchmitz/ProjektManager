@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED33AA292965732200B78E21 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33AA282965732200B78E21 /* RegisterViewController.swift */; };
+		ED33AA2F296588B900B78E21 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33AA2E296588B900B78E21 /* UserViewController.swift */; };
+		ED33AA312965891600B78E21 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33AA302965891600B78E21 /* LoginViewController.swift */; };
+		ED46F2772966C0F400920CA5 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED46F2752966C0F400920CA5 /* User+CoreDataClass.swift */; };
+		ED46F2782966C0F400920CA5 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED46F2762966C0F400920CA5 /* User+CoreDataProperties.swift */; };
 		ED93B6F72952FEE300ECE422 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93B6F62952FEE300ECE422 /* AppDelegate.swift */; };
 		ED93B6F92952FEE300ECE422 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93B6F82952FEE300ECE422 /* SceneDelegate.swift */; };
 		ED93B6FB2952FEE300ECE422 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93B6FA2952FEE300ECE422 /* ViewController.swift */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED33AA282965732200B78E21 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		ED33AA2E296588B900B78E21 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		ED33AA302965891600B78E21 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ED46F2752966C0F400920CA5 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ED46F2762966C0F400920CA5 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ED93B6F32952FEE300ECE422 /* ProjektManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjektManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED93B6F62952FEE300ECE422 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED93B6F82952FEE300ECE422 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +52,8 @@
 		ED93B6EA2952FEE300ECE422 = {
 			isa = PBXGroup;
 			children = (
+				ED46F2752966C0F400920CA5 /* User+CoreDataClass.swift */,
+				ED46F2762966C0F400920CA5 /* User+CoreDataProperties.swift */,
 				ED93B6F52952FEE300ECE422 /* ProjektManager */,
 				ED93B6F42952FEE300ECE422 /* Products */,
 			);
@@ -61,11 +73,14 @@
 				ED93B6F62952FEE300ECE422 /* AppDelegate.swift */,
 				ED93B6F82952FEE300ECE422 /* SceneDelegate.swift */,
 				ED93B6FA2952FEE300ECE422 /* ViewController.swift */,
+				ED33AA2E296588B900B78E21 /* UserViewController.swift */,
+				ED33AA302965891600B78E21 /* LoginViewController.swift */,
 				ED93B6FC2952FEE300ECE422 /* Main.storyboard */,
 				ED93B7022952FEE400ECE422 /* Assets.xcassets */,
 				ED93B7042952FEE400ECE422 /* LaunchScreen.storyboard */,
 				ED93B7072952FEE400ECE422 /* Info.plist */,
 				ED93B6FF2952FEE300ECE422 /* ProjektManager.xcdatamodeld */,
+				ED33AA282965732200B78E21 /* RegisterViewController.swift */,
 			);
 			path = ProjektManager;
 			sourceTree = "<group>";
@@ -141,10 +156,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED33AA312965891600B78E21 /* LoginViewController.swift in Sources */,
 				ED93B6FB2952FEE300ECE422 /* ViewController.swift in Sources */,
+				ED33AA2F296588B900B78E21 /* UserViewController.swift in Sources */,
+				ED33AA292965732200B78E21 /* RegisterViewController.swift in Sources */,
 				ED93B7012952FEE300ECE422 /* ProjektManager.xcdatamodeld in Sources */,
 				ED93B6F72952FEE300ECE422 /* AppDelegate.swift in Sources */,
+				ED46F2772966C0F400920CA5 /* User+CoreDataClass.swift in Sources */,
 				ED93B6F92952FEE300ECE422 /* SceneDelegate.swift in Sources */,
+				ED46F2782966C0F400920CA5 /* User+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
