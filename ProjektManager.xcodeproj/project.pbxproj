@@ -19,6 +19,8 @@
 		ED93B7012952FEE300ECE422 /* ProjektManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED93B6FF2952FEE300ECE422 /* ProjektManager.xcdatamodeld */; };
 		ED93B7032952FEE400ECE422 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED93B7022952FEE400ECE422 /* Assets.xcassets */; };
 		ED93B7062952FEE400ECE422 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED93B7042952FEE400ECE422 /* LaunchScreen.storyboard */; };
+		EDF2333C296D71A200C0C654 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF2333B296D71A200C0C654 /* SafariViewController.swift */; };
+		EDF2333E296D9B0000C0C654 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF2333D296D9B0000C0C654 /* ToDoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		ED93B7022952FEE400ECE422 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED93B7052952FEE400ECE422 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED93B7072952FEE400ECE422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDF2333B296D71A200C0C654 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
+		EDF2333D296D9B0000C0C654 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED333427296D6DA800CBFEA6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED93B6FA2952FEE300ECE422 /* ViewController.swift */,
+				ED33AA2E296588B900B78E21 /* UserViewController.swift */,
+				ED33AA302965891600B78E21 /* LoginViewController.swift */,
+				EDF2333B296D71A200C0C654 /* SafariViewController.swift */,
+				EDF2333D296D9B0000C0C654 /* ToDoViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		ED93B6EA2952FEE300ECE422 = {
 			isa = PBXGroup;
 			children = (
@@ -70,11 +86,9 @@
 		ED93B6F52952FEE300ECE422 /* ProjektManager */ = {
 			isa = PBXGroup;
 			children = (
+				ED333427296D6DA800CBFEA6 /* Views */,
 				ED93B6F62952FEE300ECE422 /* AppDelegate.swift */,
 				ED93B6F82952FEE300ECE422 /* SceneDelegate.swift */,
-				ED93B6FA2952FEE300ECE422 /* ViewController.swift */,
-				ED33AA2E296588B900B78E21 /* UserViewController.swift */,
-				ED33AA302965891600B78E21 /* LoginViewController.swift */,
 				ED93B6FC2952FEE300ECE422 /* Main.storyboard */,
 				ED93B7022952FEE400ECE422 /* Assets.xcassets */,
 				ED93B7042952FEE400ECE422 /* LaunchScreen.storyboard */,
@@ -156,8 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF2333E296D9B0000C0C654 /* ToDoViewController.swift in Sources */,
 				ED33AA312965891600B78E21 /* LoginViewController.swift in Sources */,
 				ED93B6FB2952FEE300ECE422 /* ViewController.swift in Sources */,
+				EDF2333C296D71A200C0C654 /* SafariViewController.swift in Sources */,
 				ED33AA2F296588B900B78E21 /* UserViewController.swift in Sources */,
 				ED33AA292965732200B78E21 /* RegisterViewController.swift in Sources */,
 				ED93B7012952FEE300ECE422 /* ProjektManager.xcdatamodeld in Sources */,
