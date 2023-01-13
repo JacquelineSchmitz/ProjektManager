@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED1183272971920E00A7728C /* TerminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1183262971920E00A7728C /* TerminViewController.swift */; };
 		ED33AA292965732200B78E21 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33AA282965732200B78E21 /* RegisterViewController.swift */; };
 		ED33AA2F296588B900B78E21 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33AA2E296588B900B78E21 /* UserViewController.swift */; };
 		ED33AA312965891600B78E21 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33AA302965891600B78E21 /* LoginViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED1183262971920E00A7728C /* TerminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminViewController.swift; sourceTree = "<group>"; };
 		ED33AA282965732200B78E21 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		ED33AA2E296588B900B78E21 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		ED33AA302965891600B78E21 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -58,9 +60,11 @@
 			children = (
 				ED93B6FA2952FEE300ECE422 /* ViewController.swift */,
 				ED33AA2E296588B900B78E21 /* UserViewController.swift */,
+				ED33AA282965732200B78E21 /* RegisterViewController.swift */,
 				ED33AA302965891600B78E21 /* LoginViewController.swift */,
-				EDF2333B296D71A200C0C654 /* SafariViewController.swift */,
 				EDF2333D296D9B0000C0C654 /* ToDoViewController.swift */,
+				EDF2333B296D71A200C0C654 /* SafariViewController.swift */,
+				ED1183262971920E00A7728C /* TerminViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -94,7 +98,6 @@
 				ED93B7042952FEE400ECE422 /* LaunchScreen.storyboard */,
 				ED93B7072952FEE400ECE422 /* Info.plist */,
 				ED93B6FF2952FEE300ECE422 /* ProjektManager.xcdatamodeld */,
-				ED33AA282965732200B78E21 /* RegisterViewController.swift */,
 			);
 			path = ProjektManager;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				EDF2333E296D9B0000C0C654 /* ToDoViewController.swift in Sources */,
 				ED33AA312965891600B78E21 /* LoginViewController.swift in Sources */,
 				ED93B6FB2952FEE300ECE422 /* ViewController.swift in Sources */,
+				ED1183272971920E00A7728C /* TerminViewController.swift in Sources */,
 				EDF2333C296D71A200C0C654 /* SafariViewController.swift in Sources */,
 				ED33AA2F296588B900B78E21 /* UserViewController.swift in Sources */,
 				ED33AA292965732200B78E21 /* RegisterViewController.swift in Sources */,

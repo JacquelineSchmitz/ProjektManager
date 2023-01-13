@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e6h-31-1GN">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIQ-7J-n0r">
-                                <rect key="frame" x="40" y="757" width="313" height="34.333333333333329"/>
+                                <rect key="frame" x="40" y="757" width="313" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="REGISTRIEREN" cornerStyle="capsule"/>
                                 <connections>
@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YK8-qa-T0b">
-                                <rect key="frame" x="40" y="694" width="313" height="34.333333333333329"/>
+                                <rect key="frame" x="40" y="694" width="313" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="LOGIN" cornerStyle="capsule"/>
                                 <connections>
@@ -414,14 +414,58 @@
         <!--Kalender-->
         <scene sceneID="3HR-53-rod">
             <objects>
-                <viewController id="e6h-31-1GN" sceneMemberID="viewController">
+                <viewController id="e6h-31-1GN" customClass="TerminViewController" customModule="ProjektManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TOf-8K-Ith">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Termin Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbs-XM-bDu">
+                                <rect key="frame" x="102" y="124" width="188" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kVi-mI-X4O">
+                                <rect key="frame" x="40" y="274" width="313" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z44-qg-32e">
+                                <rect key="frame" x="40" y="694" width="313" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Termin wählen"/>
+                                <connections>
+                                    <action selector="createTermin" destination="e6h-31-1GN" eventType="touchUpInside" id="txV-Kf-ex2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uia-bO-o5F">
+                                <rect key="frame" x="40" y="348" width="313" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="OnA-Q4-dgf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="z44-qg-32e" firstAttribute="leading" secondItem="OnA-Q4-dgf" secondAttribute="leading" constant="40" id="0l8-Ec-z3t"/>
+                            <constraint firstItem="kVi-mI-X4O" firstAttribute="top" secondItem="Wbs-XM-bDu" secondAttribute="bottom" constant="120" id="2ry-Tt-jhd"/>
+                            <constraint firstItem="OnA-Q4-dgf" firstAttribute="bottom" secondItem="z44-qg-32e" secondAttribute="bottom" constant="40" id="984-2W-gun"/>
+                            <constraint firstItem="OnA-Q4-dgf" firstAttribute="trailing" secondItem="Wbs-XM-bDu" secondAttribute="trailing" constant="103" id="JH9-Ql-rAJ"/>
+                            <constraint firstItem="OnA-Q4-dgf" firstAttribute="trailing" secondItem="Uia-bO-o5F" secondAttribute="trailing" constant="40" id="KT5-jh-h7o"/>
+                            <constraint firstItem="Wbs-XM-bDu" firstAttribute="leading" secondItem="OnA-Q4-dgf" secondAttribute="leading" constant="102" id="WHl-Rp-8Ol"/>
+                            <constraint firstItem="OnA-Q4-dgf" firstAttribute="trailing" secondItem="kVi-mI-X4O" secondAttribute="trailing" constant="40" id="f5d-wk-O07"/>
+                            <constraint firstItem="Uia-bO-o5F" firstAttribute="top" secondItem="kVi-mI-X4O" secondAttribute="bottom" constant="40" id="mjH-jt-DsA"/>
+                            <constraint firstItem="Uia-bO-o5F" firstAttribute="leading" secondItem="OnA-Q4-dgf" secondAttribute="leading" constant="40" id="rQ5-Ja-FNG"/>
+                            <constraint firstItem="kVi-mI-X4O" firstAttribute="leading" secondItem="OnA-Q4-dgf" secondAttribute="leading" constant="40" id="vu0-vC-O5I"/>
+                            <constraint firstItem="OnA-Q4-dgf" firstAttribute="trailing" secondItem="z44-qg-32e" secondAttribute="trailing" constant="40" id="yOQ-SW-lyU"/>
+                            <constraint firstItem="Wbs-XM-bDu" firstAttribute="top" secondItem="OnA-Q4-dgf" secondAttribute="top" constant="21" id="ztA-Uk-HMO"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Kalender" image="calendar.circle" catalog="system" selectedImage="calendar.circle.fill" id="i3Y-ai-7FZ"/>
+                    <connections>
+                        <outlet property="dateField" destination="kVi-mI-X4O" id="986-jI-F21"/>
+                        <outlet property="timeField" destination="Uia-bO-o5F" id="1Dm-11-w3Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qcv-Ju-PS3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
