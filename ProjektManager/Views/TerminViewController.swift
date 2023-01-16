@@ -13,6 +13,10 @@ class TerminViewController: UIViewController {
     @IBOutlet weak var dateField: UITextField!
     @IBOutlet weak var timeField: UITextField!
     
+    @IBOutlet weak var termin1: UILabel!
+    @IBOutlet weak var termin2: UILabel!
+    @IBOutlet weak var termin3: UILabel!
+    
 //    let dateTimePicker = UIDatePicker()
     
     let datePicker = UIDatePicker()
@@ -22,6 +26,8 @@ class TerminViewController: UIViewController {
         super.viewDidLoad()
         createDatePicker()
         createTimePicker()
+//        lade termin 123 aus coredata
+        
         
     }
     
@@ -80,7 +86,24 @@ class TerminViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    @IBAction func createTermin() {}
+    @IBAction func createTermin() {
+        // bestimme mit der varible time das es ein string ist
+        let date: String = dateField.text ?? ""
+        let time: String = timeField.text ?? ""
+        let neuerTermin = date + " " + time
+        if termin1.text == "" {
+            termin1.text = neuerTermin
+        }else if termin2.text == "" {
+            termin2.text = neuerTermin
+        }else if termin3.text == "" {
+            termin3.text = neuerTermin
+        }else {
+            termin1.text = termin2.text
+            termin2.text = termin3.text
+            termin3.text = neuerTermin
+        }
+//       speicher termin123 ab
+    }
   
     
     

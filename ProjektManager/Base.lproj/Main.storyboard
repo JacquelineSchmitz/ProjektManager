@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e6h-31-1GN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TRt-nJ-UX8">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -226,12 +226,22 @@
                                 <rect key="frame" x="-33" y="223" width="459" height="245"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4Q-h4-lUu">
+                                <rect key="frame" x="40" y="719" width="313" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="LOGOUT" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="exitApp" destination="brV-6a-8CY" eventType="touchUpInside" id="De8-UM-bEF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0ms-je-73c"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0ms-je-73c" firstAttribute="trailing" secondItem="x4Q-h4-lUu" secondAttribute="trailing" constant="40" id="733-31-P41"/>
                             <constraint firstItem="S9a-G8-aeb" firstAttribute="leading" secondItem="0ms-je-73c" secondAttribute="leading" constant="40" id="BQ1-Sv-EVb"/>
                             <constraint firstItem="0ms-je-73c" firstAttribute="trailing" secondItem="S9a-G8-aeb" secondAttribute="trailing" constant="40" id="Ilb-3P-JF5"/>
+                            <constraint firstItem="x4Q-h4-lUu" firstAttribute="leading" secondItem="0ms-je-73c" secondAttribute="leading" constant="40" id="NQS-ew-tcG"/>
                             <constraint firstItem="S9a-G8-aeb" firstAttribute="top" secondItem="0ms-je-73c" secondAttribute="top" constant="40" id="h20-UB-Sih"/>
                         </constraints>
                     </view>
@@ -433,7 +443,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z44-qg-32e">
                                 <rect key="frame" x="40" y="694" width="313" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Termin wählen"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Termin wählen" cornerStyle="capsule"/>
                                 <connections>
                                     <action selector="createTermin" destination="e6h-31-1GN" eventType="touchUpInside" id="txV-Kf-ex2"/>
                                 </connections>
@@ -443,17 +453,44 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFp-EM-C9O">
+                                <rect key="frame" x="40" y="518" width="313" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyM-aZ-zMC">
+                                <rect key="frame" x="40" y="545" width="313" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5c-Ch-cQq">
+                                <rect key="frame" x="40" y="575" width="313" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OnA-Q4-dgf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="z44-qg-32e" firstAttribute="leading" secondItem="OnA-Q4-dgf" secondAttribute="leading" constant="40" id="0l8-Ec-z3t"/>
                             <constraint firstItem="kVi-mI-X4O" firstAttribute="top" secondItem="Wbs-XM-bDu" secondAttribute="bottom" constant="120" id="2ry-Tt-jhd"/>
+                            <constraint firstItem="OnA-Q4-dgf" firstAttribute="trailing" secondItem="eFp-EM-C9O" secondAttribute="trailing" constant="40" id="59F-uJ-x0H"/>
+                            <constraint firstItem="z44-qg-32e" firstAttribute="top" secondItem="t5c-Ch-cQq" secondAttribute="bottom" constant="119" id="5hE-kU-qoa"/>
                             <constraint firstItem="OnA-Q4-dgf" firstAttribute="bottom" secondItem="z44-qg-32e" secondAttribute="bottom" constant="40" id="984-2W-gun"/>
+                            <constraint firstItem="GyM-aZ-zMC" firstAttribute="leading" secondItem="OnA-Q4-dgf" secondAttribute="leading" constant="40" id="Aa7-oe-1Gz"/>
                             <constraint firstItem="OnA-Q4-dgf" firstAttribute="trailing" secondItem="Wbs-XM-bDu" secondAttribute="trailing" constant="103" id="JH9-Ql-rAJ"/>
+                            <constraint firstItem="eFp-EM-C9O" firstAttribute="leading" secondItem="OnA-Q4-dgf" secondAttribute="leading" constant="40" id="JjY-eR-Van"/>
                             <constraint firstItem="OnA-Q4-dgf" firstAttribute="trailing" secondItem="Uia-bO-o5F" secondAttribute="trailing" constant="40" id="KT5-jh-h7o"/>
+                            <constraint firstItem="GyM-aZ-zMC" firstAttribute="top" secondItem="eFp-EM-C9O" secondAttribute="bottom" constant="27" id="QNu-fE-y3z"/>
+                            <constraint firstItem="OnA-Q4-dgf" firstAttribute="trailing" secondItem="GyM-aZ-zMC" secondAttribute="trailing" constant="40" id="Ume-o7-6kJ"/>
                             <constraint firstItem="Wbs-XM-bDu" firstAttribute="leading" secondItem="OnA-Q4-dgf" secondAttribute="leading" constant="102" id="WHl-Rp-8Ol"/>
+                            <constraint firstItem="t5c-Ch-cQq" firstAttribute="top" secondItem="GyM-aZ-zMC" secondAttribute="bottom" constant="30" id="bvx-kb-bQZ"/>
                             <constraint firstItem="OnA-Q4-dgf" firstAttribute="trailing" secondItem="kVi-mI-X4O" secondAttribute="trailing" constant="40" id="f5d-wk-O07"/>
+                            <constraint firstItem="OnA-Q4-dgf" firstAttribute="trailing" secondItem="t5c-Ch-cQq" secondAttribute="trailing" constant="40" id="h2S-hd-eec"/>
+                            <constraint firstItem="t5c-Ch-cQq" firstAttribute="leading" secondItem="OnA-Q4-dgf" secondAttribute="leading" constant="40" id="lO5-38-dRd"/>
                             <constraint firstItem="Uia-bO-o5F" firstAttribute="top" secondItem="kVi-mI-X4O" secondAttribute="bottom" constant="40" id="mjH-jt-DsA"/>
                             <constraint firstItem="Uia-bO-o5F" firstAttribute="leading" secondItem="OnA-Q4-dgf" secondAttribute="leading" constant="40" id="rQ5-Ja-FNG"/>
                             <constraint firstItem="kVi-mI-X4O" firstAttribute="leading" secondItem="OnA-Q4-dgf" secondAttribute="leading" constant="40" id="vu0-vC-O5I"/>
@@ -464,6 +501,9 @@
                     <tabBarItem key="tabBarItem" title="Kalender" image="calendar.circle" catalog="system" selectedImage="calendar.circle.fill" id="i3Y-ai-7FZ"/>
                     <connections>
                         <outlet property="dateField" destination="kVi-mI-X4O" id="986-jI-F21"/>
+                        <outlet property="termin1" destination="eFp-EM-C9O" id="2Pr-K5-mVt"/>
+                        <outlet property="termin2" destination="GyM-aZ-zMC" id="ANi-Yf-hg2"/>
+                        <outlet property="termin3" destination="t5c-Ch-cQq" id="C05-lk-WRH"/>
                         <outlet property="timeField" destination="Uia-bO-o5F" id="1Dm-11-w3Z"/>
                     </connections>
                 </viewController>

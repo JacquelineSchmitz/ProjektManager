@@ -19,7 +19,9 @@ class UserViewController: UIViewController {
     }
     
 
-   
+    @IBAction func exitApp(){
+        UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
+    }
 
 }
 
