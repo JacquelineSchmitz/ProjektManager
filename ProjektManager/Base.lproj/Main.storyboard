@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TRt-nJ-UX8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xEJ-Rd-2oC">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -299,44 +299,41 @@
         <!--View Controller-->
         <scene sceneID="qMD-6j-1fm">
             <objects>
-                <viewController id="xEJ-Rd-2oC" sceneMemberID="viewController">
+                <viewController id="xEJ-Rd-2oC" customClass="PDFViewController" customModule="ProjektManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iko-mh-Me1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEG-DI-AwX">
-                                <rect key="frame" x="80" y="101" width="233" height="162"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="camera.on.rectangle" catalog="system"/>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="O28-vA-2CZ">
-                                <rect key="frame" x="80" y="349" width="240" height="332"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PDF Ansicht" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMF-uJ-IGr">
+                                <rect key="frame" x="146" y="76" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4v-8X-8xO" customClass="PDFView">
+                                <rect key="frame" x="20" y="117" width="353" height="681"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROE-MA-zEn">
-                                <rect key="frame" x="40" y="773" width="313" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Projekt generieren" cornerStyle="capsule"/>
-                            </button>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kb9-cc-8Pt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ROE-MA-zEn" firstAttribute="leading" secondItem="kb9-cc-8Pt" secondAttribute="leading" constant="40" id="Ghx-16-VUM"/>
-                            <constraint firstItem="kb9-cc-8Pt" firstAttribute="trailing" secondItem="ROE-MA-zEn" secondAttribute="trailing" constant="40" id="q1p-Ry-gaC"/>
-                            <constraint firstItem="kb9-cc-8Pt" firstAttribute="bottom" secondItem="ROE-MA-zEn" secondAttribute="bottom" constant="10" id="wM3-5Z-R79"/>
+                            <constraint firstItem="kb9-cc-8Pt" firstAttribute="trailing" secondItem="s4v-8X-8xO" secondAttribute="trailing" constant="20" id="5mW-gX-H2v"/>
+                            <constraint firstItem="JMF-uJ-IGr" firstAttribute="centerX" secondItem="s4v-8X-8xO" secondAttribute="centerX" id="DGq-8j-7d6"/>
+                            <constraint firstItem="JMF-uJ-IGr" firstAttribute="top" secondItem="kb9-cc-8Pt" secondAttribute="top" constant="17" id="Dtt-Ke-O1R"/>
+                            <constraint firstItem="kb9-cc-8Pt" firstAttribute="bottom" secondItem="s4v-8X-8xO" secondAttribute="bottom" constant="20" id="TeD-g7-Jeb"/>
+                            <constraint firstItem="JMF-uJ-IGr" firstAttribute="leading" secondItem="kb9-cc-8Pt" secondAttribute="leading" constant="146" id="Yc8-wl-W63"/>
+                            <constraint firstItem="s4v-8X-8xO" firstAttribute="leading" secondItem="kb9-cc-8Pt" secondAttribute="leading" constant="20" id="rlM-hK-QvZ"/>
+                            <constraint firstItem="s4v-8X-8xO" firstAttribute="top" secondItem="JMF-uJ-IGr" secondAttribute="bottom" constant="20" id="ze5-SH-y5x"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pdfView" destination="s4v-8X-8xO" id="eI3-Kc-Zuc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugC-ma-2yS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1731" y="1311"/>
+            <point key="canvasLocation" x="1730.534351145038" y="1309.8591549295775"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="N9v-P1-Xkt">
@@ -613,7 +610,6 @@
         <image name="bild4" width="1380" height="941"/>
         <image name="calendar.circle" catalog="system" width="128" height="123"/>
         <image name="calendar.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="camera.on.rectangle" catalog="system" width="128" height="98"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="folder" catalog="system" width="128" height="96"/>
@@ -625,9 +621,6 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="safari" catalog="system" width="128" height="123"/>
         <image name="safari.fill" catalog="system" width="128" height="123"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
