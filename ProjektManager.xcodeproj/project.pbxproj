@@ -11,6 +11,8 @@
 		ED33AA292965732200B78E21 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33AA282965732200B78E21 /* RegisterViewController.swift */; };
 		ED33AA2F296588B900B78E21 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33AA2E296588B900B78E21 /* UserViewController.swift */; };
 		ED33AA312965891600B78E21 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33AA302965891600B78E21 /* LoginViewController.swift */; };
+		ED3949A4297A868000BC1D1E /* PDFData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3949A3297A868000BC1D1E /* PDFData.swift */; };
+		ED3949A6297A8E7E00BC1D1E /* ProjektViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3949A5297A8E7E00BC1D1E /* ProjektViewController.swift */; };
 		ED46F2772966C0F400920CA5 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED46F2752966C0F400920CA5 /* User+CoreDataClass.swift */; };
 		ED46F2782966C0F400920CA5 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED46F2762966C0F400920CA5 /* User+CoreDataProperties.swift */; };
 		ED93B6F72952FEE300ECE422 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93B6F62952FEE300ECE422 /* AppDelegate.swift */; };
@@ -30,6 +32,8 @@
 		ED33AA282965732200B78E21 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		ED33AA2E296588B900B78E21 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		ED33AA302965891600B78E21 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ED3949A3297A868000BC1D1E /* PDFData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFData.swift; sourceTree = "<group>"; };
+		ED3949A5297A8E7E00BC1D1E /* ProjektViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjektViewController.swift; sourceTree = "<group>"; };
 		ED46F2752966C0F400920CA5 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		ED46F2762966C0F400920CA5 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ED93B6F32952FEE300ECE422 /* ProjektManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjektManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +61,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ED333427296D6DA800CBFEA6 /* Views */ = {
+		ED333427296D6DA800CBFEA6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				ED93B6FA2952FEE300ECE422 /* ViewController.swift */,
@@ -67,8 +71,18 @@
 				EDF2333D296D9B0000C0C654 /* ToDoViewController.swift */,
 				EDF2333B296D71A200C0C654 /* SafariViewController.swift */,
 				ED1183262971920E00A7728C /* TerminViewController.swift */,
+				EDDD91FC2979153700D3D905 /* PDFViewController.swift */,
+				ED3949A5297A8E7E00BC1D1E /* ProjektViewController.swift */,
 			);
-			path = Views;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ED3949A2297A862F00BC1D1E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED3949A3297A868000BC1D1E /* PDFData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		ED93B6EA2952FEE300ECE422 = {
@@ -92,7 +106,8 @@
 		ED93B6F52952FEE300ECE422 /* ProjektManager */ = {
 			isa = PBXGroup;
 			children = (
-				ED333427296D6DA800CBFEA6 /* Views */,
+				ED333427296D6DA800CBFEA6 /* Controllers */,
+				ED3949A2297A862F00BC1D1E /* Models */,
 				ED93B6F62952FEE300ECE422 /* AppDelegate.swift */,
 				ED93B6F82952FEE300ECE422 /* SceneDelegate.swift */,
 				ED93B6FC2952FEE300ECE422 /* Main.storyboard */,
@@ -100,7 +115,6 @@
 				ED93B7042952FEE400ECE422 /* LaunchScreen.storyboard */,
 				ED93B7072952FEE400ECE422 /* Info.plist */,
 				ED93B6FF2952FEE300ECE422 /* ProjektManager.xcdatamodeld */,
-				EDDD91FC2979153700D3D905 /* PDFViewController.swift */,
 			);
 			path = ProjektManager;
 			sourceTree = "<group>";
@@ -183,9 +197,11 @@
 				ED1183272971920E00A7728C /* TerminViewController.swift in Sources */,
 				EDF2333C296D71A200C0C654 /* SafariViewController.swift in Sources */,
 				ED33AA2F296588B900B78E21 /* UserViewController.swift in Sources */,
+				ED3949A6297A8E7E00BC1D1E /* ProjektViewController.swift in Sources */,
 				ED33AA292965732200B78E21 /* RegisterViewController.swift in Sources */,
 				ED93B7012952FEE300ECE422 /* ProjektManager.xcdatamodeld in Sources */,
 				ED93B6F72952FEE300ECE422 /* AppDelegate.swift in Sources */,
+				ED3949A4297A868000BC1D1E /* PDFData.swift in Sources */,
 				ED46F2772966C0F400920CA5 /* User+CoreDataClass.swift in Sources */,
 				ED93B6F92952FEE300ECE422 /* SceneDelegate.swift in Sources */,
 				ED46F2782966C0F400920CA5 /* User+CoreDataProperties.swift in Sources */,
