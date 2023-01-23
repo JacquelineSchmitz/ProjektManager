@@ -87,6 +87,8 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func saveUser(_ sender: UIButton!) {
+        
+         //Neuen Kontakt erzeugen
         let newUser = User(context: self.context)
         newUser.name = nameField.text
         newUser.gender = genderField.text
@@ -96,6 +98,7 @@ class RegisterViewController: UIViewController {
         newUser.email = emailField.text
         newUser.firma = firmaField.text
         
+        // Save Data
         do{
             try self.context.save()
             print(newUser)
@@ -103,6 +106,8 @@ class RegisterViewController: UIViewController {
             print("error")
         }
         
+        
+        // Daten per Notificatiom Center Senden
         NotificationCenter.default.post(name: NSNotification.Name.init("de.ViewsWechseln.addUser"), object: newUser)
         
         self.dismiss(animated: true)
