@@ -47,7 +47,7 @@ class PDFCreator: NSObject {
       let imageBottom = addImage(pageRect: pageRect, imageTop: titleBottom + 18.0)
       addBodyText(pageRect: pageRect, textTop: imageBottom + 18.0)
       
-      let context = context.cgContext
+//      let context = context.cgContext
       //drawTearOffs(context, pageRect: pageRect, tearOffY: pageRect.height * 4.0 / 5.0, numberTabs: 8)
       //drawContactLabels(context, pageRect: pageRect, numberTabs: 8)
     }
