@@ -93,6 +93,7 @@ class RegisterViewController: UIViewController {
         newUser.name = nameField.text
         newUser.gender = genderField.text
         let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "dd/MM/yyyy"
         newUser.birthdate = dateFormater.date(from: birthdateField.text!)
         newUser.password = passwordField.text
         newUser.email = emailField.text

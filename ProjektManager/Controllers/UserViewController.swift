@@ -15,7 +15,7 @@ class UserViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = "Hallo \(user.name ?? "")"
+        nameLabel.text = "Hallo \(eingeloggterUser!.name ?? "")"
     }
     
 

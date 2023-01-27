@@ -142,7 +142,7 @@
                         <outlet property="nameField" destination="6Wq-WV-9iS" id="FeD-82-Cvw"/>
                         <outlet property="passwordField" destination="KFY-uG-Rn3" id="Cmr-zA-9wI"/>
                         <outlet property="registerButton" destination="yo9-8A-Zxz" id="B4A-Wt-9dV"/>
-                        <segue destination="6Sq-Ti-3w3" kind="presentation" identifier="registerSegue" modalPresentationStyle="fullScreen" id="QCG-ps-E67"/>
+                        <segue destination="6Sq-Ti-3w3" kind="show" identifier="registerSegue" id="QCG-ps-E67"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpa-mq-fIa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -780,7 +780,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TJ3-Ha-327"/>
+        <segue reference="QCG-ps-E67"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0036755995820000002" green="0.49781650300000002" blue="0.70807844399999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>

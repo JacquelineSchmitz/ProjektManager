@@ -2,7 +2,7 @@
 //  Termine+CoreDataProperties.swift
 //  ProjektManager
 //
-//  Created by Jacqueline Schmitz on 26.01.23.
+//  Created by Jacqueline Schmitz on 27.01.23.
 //
 //
 
@@ -16,9 +16,9 @@ extension Termine {
         return NSFetchRequest<Termine>(entityName: "Termine")
     }
 
-    @NSManaged public var termin1: Date?
-    @NSManaged public var termin2: Date?
-    @NSManaged public var termin3: Date?
+    @NSManaged public var termin1: String?
+    @NSManaged public var termin2: String?
+    @NSManaged public var termin3: String?
 
 }
 

@@ -10,6 +10,9 @@ import UIKit
 
 class TerminViewController: UIViewController {
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var termine = [Termine]()
+    
     @IBOutlet weak var dateField: UITextField!
     @IBOutlet weak var timeField: UITextField!
     
@@ -22,14 +25,28 @@ class TerminViewController: UIViewController {
     let datePicker = UIDatePicker()
     let timePicker = UIDatePicker()
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         createDatePicker()
         createTimePicker()
-//        lade termin 123 aus coredata
-        
-        
+
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
+        fetchTermine()
     }
+    func fetchTermine() {
+ 
+            //Termine laden
+             
+                termin1.text = eingeloggterUser!.termin1
+                termin2.text = eingeloggterUser!.termin2
+                termin3.text = eingeloggterUser!.termin3
+            
+    }
+        
+    
     
     func createDatePicker(){
         datePicker.preferredDatePickerStyle = .wheels
@@ -88,21 +105,49 @@ class TerminViewController: UIViewController {
     
     @IBAction func createTermin() {
         // bestimme mit der varible time das es ein string ist
+//        let newUser = User(context: self.context)
+//        newUser.name = nameField.text
+//        newUser.gender = genderField.text
+//        let dateFormater = DateFormatter()
+//        newUser.birthdate = dateFormater.date(from: birthdateField.text!)
+//        newUser.password = passwordField.text
+//        newUser.email = emailField.text
+//        newUser.firma = firmaField.text
+     
+       
         let date: String = dateField.text ?? ""
         let time: String = timeField.text ?? ""
         let neuerTermin = date + " " + time
         if termin1.text == "" {
+            print(1)
             termin1.text = neuerTermin
+           
         }else if termin2.text == "" {
+            print(2)
             termin2.text = neuerTermin
+            
         }else if termin3.text == "" {
+            print(3)
             termin3.text = neuerTermin
+        
         }else {
+            print(4)
             termin1.text = termin2.text
             termin2.text = termin3.text
             termin3.text = neuerTermin
+           
         }
+        eingeloggterUser!.termin1 = termin1.text
+        eingeloggterUser!.termin2 = termin2.text
+        eingeloggterUser!.termin3 = termin3.text
 //       speicher termin 123 ab
+        do{
+            try self.context.save()
+        }catch{
+            print("creation failed")
+        }
+        
+        
     }
   
     

@@ -83,12 +83,20 @@ class LoginViewController: UIViewController {
      }*/
     
     @IBAction func button_tapped(_ sender: Any) {
-        for i in 0...users!.count - 1 {
-            print(users![i].email)
-            if  (users![i].email == emailField.text && users![i].password == passwordField.text) {
-                performSegue(withIdentifier: "show_second", sender: self.users![i])
-                break
-            }
+//        funktiniert nur mit einem angemeldeten user
+        
+//        for i in 0...users!.count - 1 {
+//            if  (users![i].email == emailField.text && users![i].password == passwordField.text) {
+//                performSegue(withIdentifier: "show_second", sender: self.users![i])
+//                break
+//            }
+//        }
+        for user in users! {
+            if  (user.email == emailField.text && user.password == passwordField.text) {
+                eingeloggterUser = user
+                           performSegue(withIdentifier: "show_second", sender: user)
+                           break
+                        }
         }
     }
     
