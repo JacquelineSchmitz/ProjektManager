@@ -8,13 +8,22 @@
 import UIKit
 
 class UserViewController: UIViewController {
+   
+    
     
     var user: User!
     
     @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var newsTableView: UITableView!
+    var articles:  [Article]?
+    var newsApiClient = NewsApiClient()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        newsTableView.dataSource = self
+        articles = [Article(title: "Artikel 1"),Article(title: "Artikel 2")]
+        
         nameLabel.text = "Hallo \(eingeloggterUser!.name ?? "")"
     }
     
@@ -24,4 +33,28 @@ class UserViewController: UIViewController {
     }
 
 }
+ // TableView Data Source
+extension UserViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return articles?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsTableViewCell
+        guard let article = articles?[indexPath.row] else {return cell}
+        
+        cell.titelLabel.text = article.title ?? "Unbekannter Titel"
+        cell.descriptionLabel.text = article.description ?? "Keine Beschreibung vorhanden"
+        guard let stringURL = article.urlToImage else {return cell}
+        guard let imageURL = URL(string: stringURL) else {return cell}
+        newsApiClient.fetchImageBy(URL: imageURL) { image in
+            DispatchQueue.main.async {
+                cell.newsImageView.image = image
+            }
+        }
+        
 
+        
+        return cell
+    }
+}
