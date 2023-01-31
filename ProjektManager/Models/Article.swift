@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Article {
+public struct Article {
     
     var author: String?
     var title: String?

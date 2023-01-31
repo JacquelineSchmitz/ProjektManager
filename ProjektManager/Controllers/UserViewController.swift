@@ -22,7 +22,7 @@ class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         newsTableView.dataSource = self
-        articles = [Article(title: "Artikel 1"),Article(title: "Artikel 2")]
+        articles = mockData
         
         nameLabel.text = "Hallo \(eingeloggterUser!.name ?? "")"
     }
@@ -52,9 +52,9 @@ extension UserViewController: UITableViewDataSource {
                 cell.newsImageView.image = image
             }
         }
-        
 
-        
         return cell
     }
 }
+
+

@@ -30,6 +30,7 @@
 		ED9DE6E32983E2AF003AB94C /* Termine+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9DE6DF2983E2AF003AB94C /* Termine+CoreDataClass.swift */; };
 		ED9DE6E42983E2AF003AB94C /* Termine+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9DE6E02983E2AF003AB94C /* Termine+CoreDataProperties.swift */; };
 		ED9DE6E62983FF8C003AB94C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9DE6E52983FF8C003AB94C /* Constants.swift */; };
+		EDABC955298923BC00CCD42B /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDABC954298923BC00CCD42B /* MockData.swift */; };
 		EDDD91FD2979153700D3D905 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD91FC2979153700D3D905 /* PDFViewController.swift */; };
 		EDF2333C296D71A200C0C654 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF2333B296D71A200C0C654 /* SafariViewController.swift */; };
 		EDF2333E296D9B0000C0C654 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF2333D296D9B0000C0C654 /* ToDoViewController.swift */; };
@@ -61,6 +62,7 @@
 		ED9DE6DF2983E2AF003AB94C /* Termine+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Termine+CoreDataClass.swift"; sourceTree = "<group>"; };
 		ED9DE6E02983E2AF003AB94C /* Termine+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Termine+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ED9DE6E52983FF8C003AB94C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EDABC954298923BC00CCD42B /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		EDDD91FC2979153700D3D905 /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		EDF2333B296D71A200C0C654 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
 		EDF2333D296D9B0000C0C654 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				ED2DF57C297E99B500981FE7 /* PDFPreviewViewController.swift */,
 				ED93B7022952FEE400ECE422 /* Assets.xcassets */,
 				ED93B7072952FEE400ECE422 /* Info.plist */,
+				EDABC954298923BC00CCD42B /* MockData.swift */,
 			);
 			path = ProjektManager;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				ED9DE6E32983E2AF003AB94C /* Termine+CoreDataClass.swift in Sources */,
 				ED9DE6E62983FF8C003AB94C /* Constants.swift in Sources */,
 				ED33AA2F296588B900B78E21 /* UserViewController.swift in Sources */,
+				EDABC955298923BC00CCD42B /* MockData.swift in Sources */,
 				ED3949A6297A8E7E00BC1D1E /* ProjektViewController.swift in Sources */,
 				ED33AA292965732200B78E21 /* RegisterViewController.swift in Sources */,
 				ED93B7012952FEE300ECE422 /* ProjektManager.xcdatamodeld in Sources */,
