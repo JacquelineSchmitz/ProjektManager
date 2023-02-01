@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ED1183272971920E00A7728C /* TerminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1183262971920E00A7728C /* TerminViewController.swift */; };
+		ED1F351A298A7F4D00BD369B /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1F3519298A7F4D00BD369B /* ArticleViewController.swift */; };
 		ED2DF579297E994800981FE7 /* PDFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2DF578297E994800981FE7 /* PDFCreator.swift */; };
 		ED2DF57B297E998E00981FE7 /* FlyerBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2DF57A297E998E00981FE7 /* FlyerBuilderViewController.swift */; };
 		ED2DF57D297E99B500981FE7 /* PDFPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2DF57C297E99B500981FE7 /* PDFPreviewViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		ED1183262971920E00A7728C /* TerminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminViewController.swift; sourceTree = "<group>"; };
+		ED1F3519298A7F4D00BD369B /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		ED2DF578297E994800981FE7 /* PDFCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCreator.swift; sourceTree = "<group>"; };
 		ED2DF57A297E998E00981FE7 /* FlyerBuilderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyerBuilderViewController.swift; sourceTree = "<group>"; };
 		ED2DF57C297E99B500981FE7 /* PDFPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFPreviewViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				ED1183262971920E00A7728C /* TerminViewController.swift */,
 				EDDD91FC2979153700D3D905 /* PDFViewController.swift */,
 				ED3949A5297A8E7E00BC1D1E /* ProjektViewController.swift */,
+				ED1F3519298A7F4D00BD369B /* ArticleViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				EDF2333C296D71A200C0C654 /* SafariViewController.swift in Sources */,
 				ED9DE6E32983E2AF003AB94C /* Termine+CoreDataClass.swift in Sources */,
 				ED9DE6E62983FF8C003AB94C /* Constants.swift in Sources */,
+				ED1F351A298A7F4D00BD369B /* ArticleViewController.swift in Sources */,
 				ED33AA2F296588B900B78E21 /* UserViewController.swift in Sources */,
 				EDABC955298923BC00CCD42B /* MockData.swift in Sources */,
 				ED3949A6297A8E7E00BC1D1E /* ProjektViewController.swift in Sources */,

@@ -22,9 +22,25 @@ class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         newsTableView.dataSource = self
-        articles = mockData
+        newsTableView.delegate = self
+//        articles = mockData
         
         nameLabel.text = "Hallo \(eingeloggterUser!.name ?? "")"
+    }
+    
+    func fetchNews() {
+        newsApiClient.fetchNews { news in
+            self.articles = news.articles
+            DispatchQueue.main.async {
+                self.newsTableView.reloadData()
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? ArticleViewController else {return}
+        guard let article = sender as? Article else {return}
+        destination.article = article
     }
     
 
@@ -33,6 +49,9 @@ class UserViewController: UIViewController {
     }
 
 }
+
+        // NewsViewController
+
  // TableView Data Source
 extension UserViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,4 +76,11 @@ extension UserViewController: UITableViewDataSource {
     }
 }
 
-
+// TableView Delegate
+extension UserViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let selectedArticle = articles?[indexPath.row] else {return}
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "showArticleSegue", sender: selectedArticle)
+    }
+}

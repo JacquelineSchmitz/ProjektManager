@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct News {
+struct News: Codable {
     
     var status: String?
     var totalResults: Int?
