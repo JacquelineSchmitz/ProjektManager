@@ -23,6 +23,7 @@ class UserViewController: UIViewController {
         super.viewDidLoad()
         newsTableView.dataSource = self
         newsTableView.delegate = self
+        fetchNews()
 //        articles = mockData
         
         nameLabel.text = "Hallo \(eingeloggterUser!.name ?? "")"
@@ -33,6 +34,7 @@ class UserViewController: UIViewController {
             self.articles = news.articles
             DispatchQueue.main.async {
                 self.newsTableView.reloadData()
+         
             }
         }
     }
