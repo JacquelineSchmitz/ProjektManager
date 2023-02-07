@@ -74,9 +74,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bild9" translatesAutoresizingMaskIntoConstraints="NO" id="e0r-tB-UpY">
-                                <rect key="frame" x="-351" y="-157" width="1380" height="1223"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="termin" translatesAutoresizingMaskIntoConstraints="NO" id="e0r-tB-UpY">
+                                <rect key="frame" x="-160" y="0.0" width="713" height="852"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yo9-8A-Zxz">
                                 <rect key="frame" x="40" y="762" width="313" height="34.333333333333371"/>
@@ -125,12 +124,16 @@
                         <viewLayoutGuide key="safeArea" id="mD9-tb-V8U"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="e0r-tB-UpY" firstAttribute="top" secondItem="wM5-bX-Smt" secondAttribute="top" id="Cv0-Uv-ndN"/>
                             <constraint firstItem="mD9-tb-V8U" firstAttribute="trailing" secondItem="yo9-8A-Zxz" secondAttribute="trailing" constant="40" id="Kij-f5-3bQ"/>
                             <constraint firstItem="yo9-8A-Zxz" firstAttribute="leading" secondItem="mD9-tb-V8U" secondAttribute="leading" constant="40" id="NLj-iZ-hJ1"/>
                             <constraint firstItem="mD9-tb-V8U" firstAttribute="trailing" secondItem="G0b-cP-qSY" secondAttribute="trailing" constant="40" id="UQ4-gx-MiA"/>
                             <constraint firstItem="G0b-cP-qSY" firstAttribute="leading" secondItem="mD9-tb-V8U" secondAttribute="leading" constant="40" id="Xdc-Ni-uWL"/>
                             <constraint firstItem="yo9-8A-Zxz" firstAttribute="top" secondItem="G0b-cP-qSY" secondAttribute="bottom" constant="100" id="gWt-hm-smO"/>
+                            <constraint firstItem="e0r-tB-UpY" firstAttribute="leading" secondItem="wM5-bX-Smt" secondAttribute="leading" constant="-160" id="hCe-6I-5Dr"/>
+                            <constraint firstAttribute="bottom" secondItem="e0r-tB-UpY" secondAttribute="bottom" id="iKC-uS-eEX"/>
                             <constraint firstItem="G0b-cP-qSY" firstAttribute="top" secondItem="mD9-tb-V8U" secondAttribute="top" constant="130" id="scN-fc-klA"/>
+                            <constraint firstAttribute="trailing" secondItem="e0r-tB-UpY" secondAttribute="trailing" constant="-160" id="wy8-h8-sqg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="REGISTRIERUNG" id="kiA-ft-Fec"/>
@@ -639,7 +642,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wYH-tO-dgI">
                                 <rect key="frame" x="0.0" y="165" width="393" height="604"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.32156038279999999" green="0.65368521209999997" blue="0.79926979539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="zuErledigen" id="xxI-oH-50Z">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
@@ -698,8 +701,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pinnwand-selber-machen 1" translatesAutoresizingMaskIntoConstraints="NO" id="ZXm-Ad-RKG">
-                                <rect key="frame" x="-232" y="-379" width="1159" height="1523"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="termin" translatesAutoresizingMaskIntoConstraints="NO" id="ZXm-Ad-RKG">
+                                <rect key="frame" x="0.0" y="-156" width="393" height="1163"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Termin Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbs-XM-bDu">
@@ -883,14 +886,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TJ3-Ha-327"/>
+        <segue reference="QCG-ps-E67"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0036755995820000002" green="0.49781650300000002" blue="0.70807844399999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="Bild10" width="450" height="300"/>
         <image name="Bild6" width="2000" height="1447"/>
         <image name="Bild8" width="626" height="514"/>
-        <image name="Bild9" width="450" height="300"/>
         <image name="bild5" width="360" height="256"/>
         <image name="calendar.circle" catalog="system" width="128" height="123"/>
         <image name="calendar.circle.fill" catalog="system" width="128" height="123"/>
@@ -903,11 +905,11 @@
         <image name="pencil.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="pinnwand-selber-machen 1" width="1688" height="1125"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="safari" catalog="system" width="128" height="123"/>
         <image name="safari.fill" catalog="system" width="128" height="123"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="termin" width="393" height="852"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
