@@ -10,11 +10,11 @@ import UIKit
 
 class ToDoViewController: UIViewController {
     
-  
+    
     
     @IBOutlet weak var tableView: UITableView!
     
-    var zuErledigen = ["Werkzeug für Objekt in...ins Auto laden"]
+    var zuErledigen = ["Werkzeug für Objekt 009 ins Auto laden"]
     var erledigt: [String] = []
     
     override func viewDidLoad() {
@@ -30,22 +30,22 @@ class ToDoViewController: UIViewController {
         
     }
     
-//    @IBAction func deleteRow(_ sender: Any) {
-//        if let selectedRows = tableView.indexPathsForSelectedRows {
-//            var items = [String]()
-//            for indexPath in selectedRows {
-//                items.append(zuErledigen[indexPath.row])
-//            }
-//            for item in items {
-//                if let index = zuErledigen.firstIndex(of: item) {
-//                    zuErledigen.remove(at: index)
-//                }
-//            }
-//            tableView.beginUpdates()
-//            tableView.deleteRows(at: selectedRows, with: .automatic)
-//            tableView.endUpdates()
-//        }
-//    }
+    //    @IBAction func deleteRow(_ sender: Any) {
+    //        if let selectedRows = tableView.indexPathsForSelectedRows {
+    //            var items = [String]()
+    //            for indexPath in selectedRows {
+    //                items.append(zuErledigen[indexPath.row])
+    //            }
+    //            for item in items {
+    //                if let index = zuErledigen.firstIndex(of: item) {
+    //                    zuErledigen.remove(at: index)
+    //                }
+    //            }
+    //            tableView.beginUpdates()
+    //            tableView.deleteRows(at: selectedRows, with: .automatic)
+    //            tableView.endUpdates()
+    //        }
+    //    }
     
     @IBAction func hinzufuegen() {
         let alert = UIAlertController(title: "Hinzufügen", message: "", preferredStyle: .alert)

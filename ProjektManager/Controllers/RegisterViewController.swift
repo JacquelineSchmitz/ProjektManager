@@ -6,13 +6,13 @@
 //
 
 /*struct User {
-    var name: String
-    var firma: String
-    var gender: String
-    var birthdate: String
-    var email: String
-    var password: String
-}*/
+ var name: String
+ var firma: String
+ var gender: String
+ var birthdate: String
+ var email: String
+ var password: String
+ }*/
 
 import UIKit
 
@@ -88,7 +88,7 @@ class RegisterViewController: UIViewController {
     
     @IBAction func saveUser(_ sender: UIButton!) {
         
-         //Neuen Kontakt erzeugen
+        //Neuen Kontakt erzeugen
         let newUser = User(context: self.context)
         newUser.name = nameField.text
         newUser.gender = genderField.text
@@ -177,17 +177,17 @@ class RegisterViewController: UIViewController {
     
     //DATATANSFER
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let destinationVC = segue.destination as! UserViewController
-//        let user = sender as! User
-//        destinationVC.user = user
-//    }
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        let destinationVC = segue.destination as! UserViewController
+    //        let user = sender as! User
+    //        destinationVC.user = user
+    //    }
     
 }
 
-   // TEXTFIELDS
+// TEXTFIELDS
 
-   extension RegisterViewController: UITextFieldDelegate{
+extension RegisterViewController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case nameField:
@@ -197,10 +197,10 @@ class RegisterViewController: UIViewController {
         return true
     }
 }
-    
-   // PICKERS
 
-   extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+// PICKERS
+
+extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -228,5 +228,5 @@ class RegisterViewController: UIViewController {
         birthdateField.becomeFirstResponder()
     }
 }
-        
+
 

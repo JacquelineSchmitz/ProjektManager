@@ -20,7 +20,7 @@ class TerminViewController: UIViewController {
     @IBOutlet weak var termin2: UILabel!
     @IBOutlet weak var termin3: UILabel!
     
-//    let dateTimePicker = UIDatePicker()
+    //    let dateTimePicker = UIDatePicker()
     
     let datePicker = UIDatePicker()
     let timePicker = UIDatePicker()
@@ -32,20 +32,20 @@ class TerminViewController: UIViewController {
         super.viewDidLoad()
         createDatePicker()
         createTimePicker()
-
+        
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         fetchTermine()
     }
     func fetchTermine() {
- 
-            //Termine laden
-             
-                termin1.text = eingeloggterUser!.termin1
-                termin2.text = eingeloggterUser!.termin2
-                termin3.text = eingeloggterUser!.termin3
-            
-    }
         
+        //Termine laden
+        
+        termin1.text = eingeloggterUser!.termin1
+        termin2.text = eingeloggterUser!.termin2
+        termin3.text = eingeloggterUser!.termin3
+        
+    }
+    
     
     
     func createDatePicker(){
@@ -65,7 +65,7 @@ class TerminViewController: UIViewController {
         
     }
     
-  
+    
     
     func createDateToolbar()-> UIToolbar {
         let toolbar = UIToolbar()
@@ -83,7 +83,7 @@ class TerminViewController: UIViewController {
         
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(timePressed))
         toolbar.setItems([doneButton], animated: true)
-
+        
         
         
         return toolbar
@@ -105,23 +105,23 @@ class TerminViewController: UIViewController {
     
     @IBAction func createTermin() {
         // bestimme mit der varible time das es ein string ist
-//        let newUser = User(context: self.context)
-//        newUser.name = nameField.text
-//        newUser.gender = genderField.text
-//        let dateFormater = DateFormatter()
-//        newUser.birthdate = dateFormater.date(from: birthdateField.text!)
-//        newUser.password = passwordField.text
-//        newUser.email = emailField.text
-//        newUser.firma = firmaField.text
-     
-       
+        //        let newUser = User(context: self.context)
+        //        newUser.name = nameField.text
+        //        newUser.gender = genderField.text
+        //        let dateFormater = DateFormatter()
+        //        newUser.birthdate = dateFormater.date(from: birthdateField.text!)
+        //        newUser.password = passwordField.text
+        //        newUser.email = emailField.text
+        //        newUser.firma = firmaField.text
+        
+        
         let date: String = dateField.text ?? ""
         let time: String = timeField.text ?? ""
         let neuerTermin = date + " " + time
         if termin1.text == "" {
             print(1)
             termin1.text = neuerTermin
-           
+            
         }else if termin2.text == "" {
             print(2)
             termin2.text = neuerTermin
@@ -129,18 +129,18 @@ class TerminViewController: UIViewController {
         }else if termin3.text == "" {
             print(3)
             termin3.text = neuerTermin
-        
+            
         }else {
             print(4)
             termin1.text = termin2.text
             termin2.text = termin3.text
             termin3.text = neuerTermin
-           
+            
         }
         eingeloggterUser!.termin1 = termin1.text
         eingeloggterUser!.termin2 = termin2.text
         eingeloggterUser!.termin3 = termin3.text
-//       speicher termin 123 ab
+        //       speicher termin 123 ab
         do{
             try self.context.save()
         }catch{
@@ -149,7 +149,7 @@ class TerminViewController: UIViewController {
         
         
     }
-  
+    
     
     
 }

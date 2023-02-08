@@ -12,7 +12,7 @@ class ArticleViewController: UIViewController {
     
     @IBOutlet weak var webView: WKWebView!
     var article: Article?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let stringURL = article?.url else {return}
@@ -20,8 +20,8 @@ class ArticleViewController: UIViewController {
         DispatchQueue.main.async {
             self.webView.load(URLRequest(url:url))
         }
-
-   
+        
+        
     }
-
+    
 }

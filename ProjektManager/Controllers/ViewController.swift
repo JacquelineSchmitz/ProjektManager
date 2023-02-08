@@ -8,13 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Hintergrundfarbe bestimmen
-//        self.view.backgroundColor = .lightGray
+        //        self.view.backgroundColor = .lightGray
     }
-
-
+    
+    
 }
 

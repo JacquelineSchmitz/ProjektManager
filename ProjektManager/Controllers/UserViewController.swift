@@ -8,7 +8,7 @@
 import UIKit
 
 class UserViewController: UIViewController {
-   
+    
     
     
     var user: User!
@@ -18,13 +18,13 @@ class UserViewController: UIViewController {
     @IBOutlet weak var newsTableView: UITableView!
     var articles:  [Article]?
     var newsApiClient = NewsApiClient()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         newsTableView.dataSource = self
         newsTableView.delegate = self
         fetchNews()
-//        articles = mockData
+        //        articles = mockData
         
         nameLabel.text = "Hallo \(eingeloggterUser!.name ?? "")"
     }
@@ -34,7 +34,7 @@ class UserViewController: UIViewController {
             self.articles = news.articles
             DispatchQueue.main.async {
                 self.newsTableView.reloadData()
-         
+                
             }
         }
     }
@@ -45,16 +45,20 @@ class UserViewController: UIViewController {
         destination.article = article
     }
     
-
+    
     @IBAction func exitApp(){
-        UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginController = storyboard.instantiateViewController(identifier: "LoginNavigationController")
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(loginController)
+        
+        
     }
-
+    
 }
 
-        // NewsViewController
+// NewsViewController
 
- // TableView Data Source
+// TableView Data Source
 extension UserViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articles?.count ?? 0
@@ -73,7 +77,7 @@ extension UserViewController: UITableViewDataSource {
                 cell.newsImageView.image = image
             }
         }
-
+        
         return cell
     }
 }

@@ -56,11 +56,11 @@ class LoginViewController: UIViewController {
     //DATATANSFER
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        wir speichern den TabBarController in einer variable
+        //        wir speichern den TabBarController in einer variable
         let destinationVC = segue.destination as! UITabBarController
-//        wir greifen auf das 1te tab des tabBarControllers [0]
+        //        wir greifen auf das 1te tab des tabBarControllers [0]
         let userVc = destinationVC.viewControllers?[0] as! UserViewController
-//        wir geben den user vom loginController zum userViewController
+        //        wir geben den user vom loginController zum userViewController
         let enteringUser = sender as? User
         userVc.user = enteringUser!
         
@@ -83,20 +83,22 @@ class LoginViewController: UIViewController {
      }*/
     
     @IBAction func button_tapped(_ sender: Any) {
-//        funktiniert nur mit einem angemeldeten user
+        //        funktiniert nur mit einem angemeldeten user
         
-//        for i in 0...users!.count - 1 {
-//            if  (users![i].email == emailField.text && users![i].password == passwordField.text) {
-//                performSegue(withIdentifier: "show_second", sender: self.users![i])
-//                break
-//            }
-//        }
+        //        for i in 0...users!.count - 1 {
+        //            if  (users![i].email == emailField.text && users![i].password == passwordField.text) {
+        //                performSegue(withIdentifier: "show_second", sender: self.users![i])
+        //                break
+        //            }
+        //        }
         for user in users! {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
             if  (user.email == emailField.text && user.password == passwordField.text) {
                 eingeloggterUser = user
-                           performSegue(withIdentifier: "show_second", sender: user)
-                           break
-                        }
+                (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
+                break
+            }
         }
     }
     
