@@ -45,7 +45,7 @@ class FlyerBuilderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Add subtle outline around text views
+        // Füge Rahmen um die TextView
         bodyTextView.layer.borderColor = UIColor.gray.cgColor
         bodyTextView.layer.borderWidth = 1.0
         bodyTextView.layer.cornerRadius = 4.0
@@ -57,7 +57,7 @@ class FlyerBuilderViewController: UIViewController {
         let shareButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareAction))
         self.toolbarItems?.append(shareButton)
         
-        // Add responder for keyboards to dismiss when tap or drag outside of text fields
+        // Bei Berührung des Bildschirms ausserhalb des keyboards, schliesse keyboard
         scrollView.addGestureRecognizer(UITapGestureRecognizer(target: scrollView, action: #selector(UIView.endEditing(_:))))
         scrollView.keyboardDismissMode = .onDrag
     }
@@ -70,14 +70,12 @@ class FlyerBuilderViewController: UIViewController {
             let image = imagePreview.image,
             let contact = contactTextView.text
         else {
-            // 2
-            let alert = UIAlertController(title: "All Information Not Provided", message: "You must supply all information to create a flyer.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Fehlende Information", message: "Tragen Sie bitte alle Informationen ein um die PDF zu teilen.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             return
         }
         
-        // 3
         let pdfCreator = PDFCreator(title: title, body: body, image: image, contact: contact)
         let pdfData = pdfCreator.createFlyer()
         let vc = UIActivityViewController(activityItems: [pdfData], applicationActivities: [])
@@ -87,21 +85,18 @@ class FlyerBuilderViewController: UIViewController {
     
     
     @objc func shareAction() {
-        // 1
         guard
             let title = flyerTextEntry.text,
             let body = bodyTextView.text,
             let image = imagePreview.image,
             let contact = contactTextView.text
         else {
-            // 2
-            let alert = UIAlertController(title: "All Information Not Provided", message: "You must supply all information to create a flyer.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Fehlende Information", message: "Tragen Sie bitte alle Informationen ein um die PDF zu teilen.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             return
         }
         
-        // 3
         let pdfCreator = PDFCreator(title: title, body: body, image: image, contact: contact)
         let pdfData = pdfCreator.createFlyer()
         let vc = UIActivityViewController(activityItems: [pdfData], applicationActivities: [])
@@ -148,8 +143,8 @@ class FlyerBuilderViewController: UIViewController {
             let _ = contactTextView.text {
             return true
         }
-        
-        let alert = UIAlertController(title: "All Information Not Provided", message: "You must supply all information to create a flyer.", preferredStyle: .alert)
+        // Alert für die Vorschau
+        let alert = UIAlertController(title: "Fehlende Information", message: "Tragen Sie bitte alle Informationen ein um die PDF zu erstellen.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
         
@@ -185,5 +180,5 @@ extension FlyerBuilderViewController: UIImagePickerControllerDelegate {
 }
 
 extension FlyerBuilderViewController: UINavigationControllerDelegate {
-    // Not used, but necessary for compilation
+    // Nicht benutzt, aber ist notwendig zum compilen 
 }

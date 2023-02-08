@@ -15,8 +15,6 @@
 		ED33AA292965732200B78E21 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33AA282965732200B78E21 /* RegisterViewController.swift */; };
 		ED33AA2F296588B900B78E21 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33AA2E296588B900B78E21 /* UserViewController.swift */; };
 		ED33AA312965891600B78E21 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33AA302965891600B78E21 /* LoginViewController.swift */; };
-		ED3949A4297A868000BC1D1E /* PDFData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3949A3297A868000BC1D1E /* PDFData.swift */; };
-		ED3949A6297A8E7E00BC1D1E /* ProjektViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3949A5297A8E7E00BC1D1E /* ProjektViewController.swift */; };
 		ED7EBCAE2987F0EC00DE8E8E /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7EBCAD2987F0EC00DE8E8E /* News.swift */; };
 		ED7EBCB02987F32F00DE8E8E /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7EBCAF2987F32F00DE8E8E /* Article.swift */; };
 		ED7EBCB22987F5E600DE8E8E /* NewsApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7EBCB12987F5E600DE8E8E /* NewsApiClient.swift */; };
@@ -32,7 +30,6 @@
 		ED9DE6E42983E2AF003AB94C /* Termine+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9DE6E02983E2AF003AB94C /* Termine+CoreDataProperties.swift */; };
 		ED9DE6E62983FF8C003AB94C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9DE6E52983FF8C003AB94C /* Constants.swift */; };
 		EDABC955298923BC00CCD42B /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDABC954298923BC00CCD42B /* MockData.swift */; };
-		EDDD91FD2979153700D3D905 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD91FC2979153700D3D905 /* PDFViewController.swift */; };
 		EDF2333C296D71A200C0C654 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF2333B296D71A200C0C654 /* SafariViewController.swift */; };
 		EDF2333E296D9B0000C0C654 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF2333D296D9B0000C0C654 /* ToDoViewController.swift */; };
 /* End PBXBuildFile section */
@@ -46,8 +43,6 @@
 		ED33AA282965732200B78E21 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		ED33AA2E296588B900B78E21 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		ED33AA302965891600B78E21 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		ED3949A3297A868000BC1D1E /* PDFData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFData.swift; sourceTree = "<group>"; };
-		ED3949A5297A8E7E00BC1D1E /* ProjektViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjektViewController.swift; sourceTree = "<group>"; };
 		ED7EBCAD2987F0EC00DE8E8E /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		ED7EBCAF2987F32F00DE8E8E /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		ED7EBCB12987F5E600DE8E8E /* NewsApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiClient.swift; sourceTree = "<group>"; };
@@ -65,7 +60,6 @@
 		ED9DE6E02983E2AF003AB94C /* Termine+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Termine+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ED9DE6E52983FF8C003AB94C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EDABC954298923BC00CCD42B /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
-		EDDD91FC2979153700D3D905 /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		EDF2333B296D71A200C0C654 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
 		EDF2333D296D9B0000C0C654 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,9 +85,9 @@
 				EDF2333D296D9B0000C0C654 /* ToDoViewController.swift */,
 				EDF2333B296D71A200C0C654 /* SafariViewController.swift */,
 				ED1183262971920E00A7728C /* TerminViewController.swift */,
-				EDDD91FC2979153700D3D905 /* PDFViewController.swift */,
-				ED3949A5297A8E7E00BC1D1E /* ProjektViewController.swift */,
 				ED1F3519298A7F4D00BD369B /* ArticleViewController.swift */,
+				ED2DF57A297E998E00981FE7 /* FlyerBuilderViewController.swift */,
+				ED2DF57C297E99B500981FE7 /* PDFPreviewViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -102,12 +96,19 @@
 			isa = PBXGroup;
 			children = (
 				ED93B6FF2952FEE300ECE422 /* ProjektManager.xcdatamodeld */,
-				ED3949A3297A868000BC1D1E /* PDFData.swift */,
 				ED7EBCAD2987F0EC00DE8E8E /* News.swift */,
 				ED7EBCAF2987F32F00DE8E8E /* Article.swift */,
 				ED7EBCB12987F5E600DE8E8E /* NewsApiClient.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		ED6FD9572993A9A9005CF7F0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ED2DF578297E994800981FE7 /* PDFCreator.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		ED7EBCB329880D4600DE8E8E /* Views */ = {
@@ -142,14 +143,12 @@
 		ED93B6F52952FEE300ECE422 /* ProjektManager */ = {
 			isa = PBXGroup;
 			children = (
+				ED6FD9572993A9A9005CF7F0 /* Utils */,
 				ED3949A2297A862F00BC1D1E /* Models */,
 				ED7EBCB329880D4600DE8E8E /* Views */,
 				ED333427296D6DA800CBFEA6 /* Controllers */,
 				ED93B6F62952FEE300ECE422 /* AppDelegate.swift */,
 				ED93B6F82952FEE300ECE422 /* SceneDelegate.swift */,
-				ED2DF578297E994800981FE7 /* PDFCreator.swift */,
-				ED2DF57A297E998E00981FE7 /* FlyerBuilderViewController.swift */,
-				ED2DF57C297E99B500981FE7 /* PDFPreviewViewController.swift */,
 				ED93B7022952FEE400ECE422 /* Assets.xcassets */,
 				ED93B7072952FEE400ECE422 /* Info.plist */,
 				EDABC954298923BC00CCD42B /* MockData.swift */,
@@ -240,7 +239,6 @@
 				ED33AA312965891600B78E21 /* LoginViewController.swift in Sources */,
 				ED7EBCB22987F5E600DE8E8E /* NewsApiClient.swift in Sources */,
 				ED93B6FB2952FEE300ECE422 /* ViewController.swift in Sources */,
-				EDDD91FD2979153700D3D905 /* PDFViewController.swift in Sources */,
 				ED1183272971920E00A7728C /* TerminViewController.swift in Sources */,
 				ED2DF57B297E998E00981FE7 /* FlyerBuilderViewController.swift in Sources */,
 				ED2DF579297E994800981FE7 /* PDFCreator.swift in Sources */,
@@ -251,13 +249,11 @@
 				ED1F351A298A7F4D00BD369B /* ArticleViewController.swift in Sources */,
 				ED33AA2F296588B900B78E21 /* UserViewController.swift in Sources */,
 				EDABC955298923BC00CCD42B /* MockData.swift in Sources */,
-				ED3949A6297A8E7E00BC1D1E /* ProjektViewController.swift in Sources */,
 				ED33AA292965732200B78E21 /* RegisterViewController.swift in Sources */,
 				ED93B7012952FEE300ECE422 /* ProjektManager.xcdatamodeld in Sources */,
 				ED7EBCB02987F32F00DE8E8E /* Article.swift in Sources */,
 				ED93B6F72952FEE300ECE422 /* AppDelegate.swift in Sources */,
 				ED9DE6E42983E2AF003AB94C /* Termine+CoreDataProperties.swift in Sources */,
-				ED3949A4297A868000BC1D1E /* PDFData.swift in Sources */,
 				ED2DF57D297E99B500981FE7 /* PDFPreviewViewController.swift in Sources */,
 				ED7EBCAE2987F0EC00DE8E8E /* News.swift in Sources */,
 				ED93B6F92952FEE300ECE422 /* SceneDelegate.swift in Sources */,

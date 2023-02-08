@@ -20,7 +20,6 @@ class TerminViewController: UIViewController {
     @IBOutlet weak var termin2: UILabel!
     @IBOutlet weak var termin3: UILabel!
     
-    //    let dateTimePicker = UIDatePicker()
     
     let datePicker = UIDatePicker()
     let timePicker = UIDatePicker()

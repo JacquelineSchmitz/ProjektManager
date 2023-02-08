@@ -45,23 +45,7 @@ struct NewsApiClient {
         }
         dataTask.resume()
     }
-    //    func fetchHeadlines(completionHandler: @escaping(News) -> Void) {
-    //        var newURL = buildURL(endpoint: NewsApiEndpoints.headlines)
-    //        newURL = newURL.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-    //        guard let url = URL(string: newURL) else {return}
-    //        let session = URLSession.shared
-    //        let dataTask = session.dataTask(with: url) { data, response, error in
-    //            if(data != nil && error == nil) {
-    //                do {
-    //                    let news = try JSONDecoder().decode(News.self, from: data!)
-    //                    completionHandler(news)
-    //                } catch {
-    //                    print("ERROR: \(error)")
-    //                }
-    //            }
-    //        }
-    //        dataTask.resume()
-    //    }
+   
     
     func fetchImageBy(URL: URL, completionHandler: @escaping(UIImage) -> Void) {
         let session = URLSession.shared
